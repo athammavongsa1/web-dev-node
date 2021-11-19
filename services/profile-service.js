@@ -19,5 +19,5 @@ module.exports = (app) => {
     res.json(profile);
     res.setStatus(200);
   };
-  app.put("/api/profile", updateCurrentProfile);
+  app.put("/api/profile ", updateCurrentProfile);
 };
