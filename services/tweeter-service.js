@@ -4,6 +4,8 @@ module.exports = (app) => {
   const findAllTweets = (req, res) => {
     res.json(tweets);
   };
+  app.get("/api/tweets/", findAllTweets);
+
   const deleteTweet = (req, res) => {
     const id = req.params["id"];
     tweets = tweets.filter((tweet) => tweet._id !== id);
