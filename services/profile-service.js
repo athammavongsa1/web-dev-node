@@ -1,20 +1,5 @@
-// let profile = require("../data/profile.json");
-let profile = [
-  {
-    name: "Jose Annunziato",
-    handle: "jannunzi",
-    profilePicture: "/public/imgs/grimes.png",
-    bannerPicture: "/public/imgs/banner.jpg",
-    bio: "Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retweets and likes are not endorsements.",
-    website: "youtube.com/webdevtv",
-    location: "Boston, MA",
-    dateOfBirth: "7/7/1968",
-    dateJoined: "4/2009",
-    followingCount: 312,
-    followersCount: 180,
-    key: 1,
-  },
-];
+let profile = require("../data/profile.json");
+
 module.exports = (app) => {
   const getCurrentProfile = (req, res) => {
     res.json(profile);
