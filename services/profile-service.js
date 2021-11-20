@@ -15,6 +15,7 @@ module.exports = (app) => {
       name: req.body.name_,
       handle: req.body.hand_,
       dateOfBirth: req.body.bday_,
+      profilePicture: req.body.pic_,
     };
     res.json(profile);
     res.setStatus(200);
