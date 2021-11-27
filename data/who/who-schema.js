@@ -4,6 +4,7 @@ const schema = mongoose.Schema(
     avatarIcon: String,
     userName: String,
     handle: String,
+    key: Number,
   },
 
   { collection: "who" }
