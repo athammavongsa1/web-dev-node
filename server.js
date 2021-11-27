@@ -29,5 +29,6 @@ require("./services/tweeter-service")(app);
 require("./services/profile-service")(app);
 require("./services/a9-tweeter-service")(app);
 require("./services/a9-who-service")(app);
+require("./services/a9-profile-service")(app);
 
 app.listen(process.env.PORT || 4000);
