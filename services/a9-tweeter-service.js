@@ -5,8 +5,11 @@ module.exports = (app) => {
 
   app.get("/api/tweets/a9", findAllTweets);
 
+  const findTweetById = (req, res) =>
+    dao.findTweetById().then((tweets) => res.json(tweets));
+  app.get("/api/tweets/a9/:id", findTweetById);
+
   const postNewTweet = (req, res) => {
-    console.log("postNewTweet: " + JSON.stringify(req.body));
     const newTweet = {
       topic: "Web Development",
       userName: "ReactJS",
@@ -29,22 +32,21 @@ module.exports = (app) => {
   const deleteTweet = (req, res) => {
     dao.deleteTweet(req.params.id).then((status) => res.send(status));
   };
-  app.delete("/api/tweets/:id", deleteTweet);
+  app.delete("/api/tweets/a9/:id", deleteTweet);
 
   const likeTweet = (req, res) => {
     const id = req.params.id;
     const tweet = dao.findTweetById(id).then((tweet) => {
       if (tweet.liked === true) {
-        console.log("tweet.liked === true");
         tweet.liked = false;
         tweet.stats.likes--;
       } else {
-        console.log("tweet.liked === false");
         tweet.liked = true;
         tweet.stats.likes++;
       }
+
       dao.updateTweet(id, tweet).then((status) => res.send(status));
     });
   };
-  app.put("/api/tweets/:id/like/a9", likeTweet);
+  app.put("/api/tweets/a9/:id/like", likeTweet);
 };
