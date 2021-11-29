@@ -25,7 +25,7 @@ module.exports = (app) => {
       },
       ...req.body,
     };
-    dao.createTweet(newTweet).then((insertedTweet) => res.json(insertedTweet));
+    dao.createTweet(newTweet).then((tweet_) => res.json(tweet_));
   };
   app.post("/api/tweets/a9", postNewTweet);
 

@@ -3,7 +3,7 @@ module.exports = (app) => {
   const findProfileById = (req, res) =>
     dao.findProfileById().then((profileConst) => res.json(profileConst));
 
-  app.get("/api/rest/:id/profile", findProfileById);
+  app.get("/rest/profile/:id", findProfileById);
 
   const updateProfile = (req, res) => {
     const id = req.params.id;
@@ -12,5 +12,5 @@ module.exports = (app) => {
     });
   };
 
-  app.put("/api/rest/:id/profile", updateProfile);
+  app.put("/rest/profile/:id", updateProfile);
 };

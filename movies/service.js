@@ -8,7 +8,7 @@ module.exports = (app) => {
     dao.deleteMovie(req.params.id).then((status) => res.send(status));
 
   const createMovie = (req, res) =>
-    dao.createMovie(req.body).then((insertedMovie) => res.json(insertedMovie));
+    dao.createMovie(req.body).then((createdMovie) => res.json(createdMovie));
 
   const findMovieById = (req, res) =>
     dao.findMovieById(req.params.id).then((movie) => res.json(movie));
