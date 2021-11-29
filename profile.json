@@ -1,0 +1,17 @@
+[{
+  "_id": {
+    "$oid": "61a2be1b9f26be96cff62cff"
+  },
+  "name": "Jose Annunziato Mongo A9!",
+  "handle": "jannunziatomongoa9!",
+  "profilePicture": "/imgs/jose.png",
+  "bannerPicture": "/public/imgs/banner.jpg",
+  "bio": "Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retweets and likes are not endorsements. Reading from the database. Also can edit this profile officially. changed the paths so hope it works!",
+  "website": "google.com",
+  "location": "Houston, TX",
+  "dateOfBirth": "1996-02-16",
+  "dateJoined": "4/2009",
+  "followingCount": 312,
+  "followersCount": 180,
+  "key": 1
+}]
