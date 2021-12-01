@@ -1,5 +1,4 @@
 let tweets = require("../data/tweets.json");
-// const dao = require("../db/tweets/tweets-dao");
 module.exports = (app) => {
   const findAllTweets = (req, res) => {
     res.json(tweets);
